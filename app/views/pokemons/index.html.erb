@@ -1,0 +1,11 @@
+<%@pokemons.each do |pokemon| %>
+<%= link_to pokemon_path(pokemon), class:"text-decoration-none" do %>
+  <div class="container">
+
+  <%= pokemon.name %>
+  <%= pokemon.element %>
+  <%= image_tag pokemon.image_path %>
+  </div>
+
+  <% end %>
+<% end %>
