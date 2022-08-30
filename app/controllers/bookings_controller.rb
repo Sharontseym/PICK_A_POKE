@@ -5,8 +5,9 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.pokemon = @pokemon
     if @booking.save
-      redirect_to user_path(@user)
-      render :new
+      redirect_to profile_path
+    else
+      render 'pages/show', status: :unprocessable_entity
     end
   end
 

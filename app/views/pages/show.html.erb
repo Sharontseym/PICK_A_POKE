@@ -1,12 +1,3 @@
-<div class="navbar">
-  <a id="title-image" href="#home"><%= image_tag "Pokemon" %></a>
-
-  <ul>
-    <li><a href="#login">Login</a></li>
-    <li><a href="#sign-up">Sign-Up</a></li>
-    <li><a href="#battle">Battle</a></li>
-  </li>
-</div>
 <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1716861/pexels-photo-1716861.jpeg?cs=srgb&dl=pexels-carolina-castilla-arias-1716861.jpg&fm=jpg);">
   <div class="banner-content">
     <h1>Take at look at your Pokemon</h1>
@@ -18,3 +9,14 @@
   <%= @pokemon.move %>
   <%= image_tag @pokemon.image_path %>
 </div>
+
+
+
+<%= simple_form_for [@pokemon, @booking] do |f| %>
+                    <div class="form-inputs">
+                        <%= f.input :date, html5: true %>
+                    </div>
+                    <div class="form-actions">
+                      <%= f.button :submit, "Book now", class: "btn btn-primary" %>
+                    </div>
+                  <% end %>

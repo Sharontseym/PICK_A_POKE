@@ -12,5 +12,9 @@ class PagesController < ApplicationController
   def show
     @pokemon = Pokemon.find(params[:id])
     @booking = Booking.new
+
+  end
+
+  def profile
   end
 end
