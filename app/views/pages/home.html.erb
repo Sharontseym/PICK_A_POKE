@@ -1,6 +1,6 @@
 
 <div class="navbar">
-  <a id="title-image" href="#home"><%= image_tag "Pokemon" %></a>
+  <a  href="#home"><%= image_tag "Pokemon", class:"title" %></a>
 
   <ul>
     <li><a href="#login">Login</a></li>
@@ -14,10 +14,10 @@
   </div>
 </div>
 <div class="container mx-auto mt-4">
-  <div class="cards">
 <%@pokemons.each do |pokemon| %>
+  <div class="cards">
+  <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
     <div class="card" style="width: 18rem;">
-<%= link_to pokemon_path(pokemon), class:"text-decoration-none" do %>
       <div class="card-body">
         <h5 class="card-title">Pokemon</h5>
         <h6 class="card-subtitle mb-2 text-muted">Pokemon</h6>
@@ -26,10 +26,9 @@
           <li class="list-group-item"><%= pokemon.element %></li>
           <li class="list-group-item"><%= pokemon.move %></li>
         </ul>
-<%= image_tag pokemon.image_path, class: "w-100" %>
-        <a href="#" class="btn btn-primary">Rent this Pokemon</a>
+    <%= image_tag pokemon.image_path, class: "w-100" %>
       </div>
-<% end %>
+  <% end %>
     </div>
 <% end %>
   </div>

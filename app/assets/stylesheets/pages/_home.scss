@@ -3,7 +3,12 @@
 //   display: grid;
 //   grid-template-columns: 5fr 2fr;
 // }
-
+.title {
+  height: 40px;
+  position: absolute;
+  left: 166px;
+  bottom: 18px;
+}
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -11,6 +16,8 @@
   /* flex-grow: 1; */
   /* padding: 16px; */
 }
+
+
 
 @media(max-width: 992px) {
   .cards {
