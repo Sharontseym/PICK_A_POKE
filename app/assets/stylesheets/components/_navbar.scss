@@ -1,12 +1,61 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  padding: 10px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .active {
+  height: 30px;
+  width: 300px;
+}
+
+#title-image {
+  height: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color: #020000;
+}
+
+.banner {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+}
+
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand img {
   width: 40px;
 }
