@@ -2,3 +2,13 @@
 <%= @pokemon.element %>
 <%= @pokemon.move %>
 <%= image_tag @pokemon.image_path %>
+
+
+<%= simple_form_for [@pokemon, @booking] do |f| %>
+                    <div class="form-inputs">
+                        <%= f.input :date, html5: true %>
+                    </div>
+                    <div class="form-actions">
+                      <%= f.button :submit, "Book now", class: "btn btn-primary" %>
+                    </div>
+                  <% end %>
