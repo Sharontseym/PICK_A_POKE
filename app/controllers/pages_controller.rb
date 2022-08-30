@@ -8,8 +8,8 @@ class PagesController < ApplicationController
   #   @pokemons = Pokemon.all
   # end
 
-  # def show
-  #   @pokemon = Pokemon.find(params[:id])
-  #   @booking = Booking.new
-  # end
+  def show
+    @pokemon = Pokemon.find(params[:id])
+    @booking = Booking.new
+  end
 end
