@@ -1,21 +1,38 @@
 // Specific CSS for your home-page
-// .container {
-//   display: grid;
-//   grid-template-columns: 5fr 2fr;
-// }
+.main-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  /* flex-grow: 1; */
+  padding: 16px;
+}
+
+.card {
+  max-width: 200px;
+  border-bottom: 10px;
+  border-top: 10px;
+  padding: 20px;
+  border: solid yellowgreen 5px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
 .title {
   height: 40px;
   position: absolute;
   left: 166px;
   bottom: 18px;
 }
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  /* flex-grow: 1; */
-  /* padding: 16px; */
-}
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-gap: 16px;
+//   /* flex-grow: 1; */
+//   /* padding: 16px; */
+// }
 
 
 
