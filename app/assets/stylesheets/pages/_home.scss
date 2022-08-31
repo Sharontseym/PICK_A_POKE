@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 .banner-content h1 {
   padding-left: 20px;
 }
@@ -19,6 +20,7 @@
   /* flex-grow: 1; */
   padding: 16px;
 }
+
 
 .card {
   max-width: 200px;
@@ -45,16 +47,6 @@
   top: 0;
   // box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
-
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   /* flex-grow: 1; */
-//   /* padding: 16px; */
-// }
-
-
 
 @media(max-width: 992px) {
   .cards {
