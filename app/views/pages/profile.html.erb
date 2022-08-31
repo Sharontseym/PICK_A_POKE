@@ -1,0 +1,19 @@
+
+<div class="container pb-2" style="border-top: 1px solid lightgrey !important; border-bottom: 1px solid lightgrey !important;">
+  <p style="font-size: 24px; font-weight: bold; margin-top: 8px;">My booked pokemons </p>
+  <div class="row">
+    <% current_user.bookings.each do |booking| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+
+          <div class="mb-3" style="width: 100%; border-radius: 8px;">
+            <div class="card-body">
+              <p>Booked for <%= booking.date %></p>
+              <p><em>Pokemon: <%= booking.pokemon.name %></em></p>
+              <p>Owner: <%= booking.pokemon.user.email %></p>
+            </div>
+          </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>

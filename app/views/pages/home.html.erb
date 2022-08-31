@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pick-A-Poke</title>
-  <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
-  <style>
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-</style>
 
-</head>
-<body>
-  <div class="navbar">
-    <a id="title-image" href="#home"><%= image_tag "Pokemon" %></a>
+<%# <div class="navbar">
+  <a  href="#home"><%= image_tag "Pokemon", class:"title" %>
 
-    <ul>
-      <li><a href="#login">Login</a></li>
-      <li><a href="#sign-up">Sign-Up</a></li>
-      <li><a href="#battle">Battle</a></li>
-    </li>
+  <%# <ul>
+    <li><a href="#login">Login</a></li>
+    <li><a href="#sign-up">Sign-Up</a></li>
+    <li><a href="#battle">Battle</a></li>
+  </li>
+</div> %>
+<div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokemon-party.jpg);">
+  <div class="banner-content">
+    <h1>Take your pick of our poke</h1>
   </div>
-  <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokemon-party.jpg);">
-    <div class="banner-content">
-      <h1>Take your pick of our poke</h1>
+</div>
+<div class="container mx-auto mt-4">
+<%@pokemons.each do |pokemon| %>
+  <div class="cards">
+  <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Pokemon</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Pokemon</h6>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= pokemon.name %></li>
+          <li class="list-group-item"><%= pokemon.element %></li>
+          <li class="list-group-item"><%= pokemon.move %></li>
+        </ul>
+          <%= image_tag pokemon.image_path, class: "w-100" %>
+        </div>
+      </div>
+  <% end %>
     </div>
+<% end %>
   </div>
-  <p></p>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>  
 
-</body>
-</html>
