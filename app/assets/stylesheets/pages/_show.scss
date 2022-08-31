@@ -1,0 +1,17 @@
+
+
+.main-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  // border: solid black 5px;
+
+}
+
+.cards {
+  border: solid black 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  /* flex-grow: 1; */
+  /* padding: 16px; */
+}

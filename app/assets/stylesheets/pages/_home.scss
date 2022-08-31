@@ -1,8 +1,5 @@
 // Specific CSS for your home-page
-// .container {
-//   display: grid;
-//   grid-template-columns: 5fr 2fr;
-// }
+
 .title {
   height: 40px;
   position: absolute;
@@ -16,8 +13,6 @@
   /* flex-grow: 1; */
   /* padding: 16px; */
 }
-
-
 
 @media(max-width: 992px) {
   .cards {
