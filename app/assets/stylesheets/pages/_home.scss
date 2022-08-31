@@ -1,4 +1,12 @@
 // Specific CSS for your home-page
+.banner-content h1 {
+  padding-left: 20px;
+}
+
+.banner {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
 .main-container {
   display: grid;
   grid-template-columns: 5fr 2fr;
