@@ -13,11 +13,13 @@
     <h1>Take your pick of our poke</h1>
   </div>
 </div>
-<div class="container mx-auto mt-4">
-<%@pokemons.each do |pokemon| %>
+<%# <div class="container mx-auto mt-4"> %>
+<div class="main-container">
   <div class="cards">
-  <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
-    <div class="card" style="width: 18rem;">
+    <%# <div class="card" style="width: 18rem;"> %>
+  <%@pokemons.each do |pokemon| %>
+    <div class="card">
+    <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
       <div class="card-body">
         <h5 class="card-title">Pokemon</h5>
         <h6 class="card-subtitle mb-2 text-muted">Pokemon</h6>
@@ -26,10 +28,11 @@
           <li class="list-group-item"><%= pokemon.element %></li>
           <li class="list-group-item"><%= pokemon.move %></li>
         </ul>
-    <%= image_tag pokemon.image_path, class: "w-100" %>
+      <%= image_tag pokemon.image_path, class: "w-100" %>
       </div>
-  <% end %>
+    <% end %>
     </div>
-<% end %>
+  <% end %>
   </div>
+  <img id="map" src="https://i.imgur.com/M7QZAvP.jpg" alt="Pokemon map">
 </div>
