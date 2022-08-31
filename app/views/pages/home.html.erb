@@ -1,22 +1,10 @@
-
-<%# <div class="navbar">
-  <a  href="#home"><%= image_tag "Pokemon", class:"title" %>
-
-  <%# <ul>
-    <li><a href="#login">Login</a></li>
-    <li><a href="#sign-up">Sign-Up</a></li>
-    <li><a href="#battle">Battle</a></li>
-  </li>
-</div> %>
 <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokemon-party.jpg);">
   <div class="banner-content">
     <h1>Take your pick of our poke</h1>
   </div>
 </div>
-<%# <div class="container mx-auto mt-4"> %>
 <div class="main-container">
   <div class="cards">
-    <%# <div class="card" style="width: 18rem;"> %>
   <%@pokemons.each do |pokemon| %>
     <div class="card">
     <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
