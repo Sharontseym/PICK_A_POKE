@@ -1,0 +1,9 @@
+<h1>New Bookmark</h1>
+<%= simple_form_for(@pokemon) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :element %>
+  <%= f.input :move %>
+  <%= f.input :photo, as: :file %>
+
+  <%= f.submit "Add your new pokemon!", class: "btn btn-primary" %>
+<% end %>
