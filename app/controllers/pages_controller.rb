@@ -24,4 +24,12 @@ class PagesController < ApplicationController
 
   def profile
   end
+  
+  def index
+    if params[:query].present?
+      @pokemons = Pokemon.where(title: params[:query])
+    else
+      @pokemons = Pokemon.all
+    end
+  end
 end
