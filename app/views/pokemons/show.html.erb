@@ -9,7 +9,8 @@
       <p><%= @pokemon.element %></p>
       <p><%= @pokemon.move %></p>
       <div>
-        <%= image_tag @pokemon.image_path, class:"image" %>
+        <%# <%= image_tag @pokemon.image_path, class:"image" %>
+        <%= cl_image_tag @pokemon.photo.key, height: 300, width: 400, crop: :fill %>
       </div>
     </div>
     <div class="col-6">
