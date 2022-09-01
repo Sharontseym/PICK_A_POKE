@@ -7,7 +7,7 @@
   <div class="cards">
   <%@pokemons.each do |pokemon| %>
     <div class="card">
-    <%= link_to page_path(pokemon.id), class:"text-decoration-none" do %>
+    <%= link_to pokemon_path(pokemon.id), class:"text-decoration-none" do %>
       <div class="card-body">
         <h5 class="card-title">Pokemon</h5>
         <h6 class="card-subtitle mb-2 text-muted">Pokemon</h6>
