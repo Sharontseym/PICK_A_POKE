@@ -17,7 +17,7 @@
   list-style-type: none;
   text-decoration: none;
   padding: 0;
-  overflow: hidden;
+  // overflow: hidden;
   margin: 0;
 }
 
@@ -57,7 +57,19 @@
 }
 
 .navbar .navbar-brand img {
-  width: 130px;
-  height: 30px;
+  width: 220px;
+  height: 50px;
+
+}
+
+.navbar .navbar-brand-2 img {
+  width: 68px;
+  height: 68px;
+  justify-content: center;
+  margin: auto property;
+  display: inline-block
+
+
+
 
 }

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :pokemons, :pages
+  resources :pokemons, :pages, :shared
 
   # Defines the root path route ("/")
   # root "articles#index"
