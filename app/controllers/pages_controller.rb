@@ -3,7 +3,20 @@ class PagesController < ApplicationController
   def home
     # @pokemon = Pokemon.find(params[:id])
     # @booking = Booking.new
-    @pokemons = Pokemon.all
+   
+
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR element ILIKE :query"
+      @pokemons = Pokemon.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @pokemons = Pokemon.all
+    end
+  
+    # if params[:query].present?
+    #   @pokemons = Pokemon.where(name: params[:query])
+    # else
+    #   @pokemons = Pokemon.all
+    # end
     # The `geocoded` scope filters only flats with coordinates
      @markers = @pokemons.geocoded.map do |pokemon|
     {
@@ -21,15 +34,8 @@ class PagesController < ApplicationController
     @pokemon = Pokemon.find(params[:id])
     @booking = Booking.new
   end
-
+  
   def profile
   end
-  
-  def index
-    if params[:query].present?
-      @pokemons = Pokemon.where(title: params[:query])
-    else
-      @pokemons = Pokemon.all
-    end
-  end
+
 end
