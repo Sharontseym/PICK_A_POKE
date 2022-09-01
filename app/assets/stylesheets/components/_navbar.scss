@@ -1,11 +1,14 @@
 .navbar {
   justify-content: space-between;
   background: white;
-  padding: 10px;
+  // padding: 10px;
+  // border: solid black 3px;
+  // margin-bottom: 0;
+  border-bottom: 0;
 }
 
 .navbar .active {
-  height: 30px;
+  height: 20px;
   width: 300px;
 }
 
@@ -59,7 +62,6 @@
 .navbar .navbar-brand img {
   width: 220px;
   height: 50px;
-
 }
 
 .navbar .navbar-brand-2 img {
@@ -68,8 +70,8 @@
   justify-content: center;
   margin: auto property;
   display: inline-block
+}
 
-
-
-
+.container-fluid {
+  border-bottom: 0;
 }
