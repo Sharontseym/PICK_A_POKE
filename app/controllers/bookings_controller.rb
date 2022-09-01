@@ -15,6 +15,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_params
-    params.require(:booking).permit(:date, :pokemon_id)
+    params.require(:booking).permit(:date, :pokemon_id, :photo)
   end
 end
