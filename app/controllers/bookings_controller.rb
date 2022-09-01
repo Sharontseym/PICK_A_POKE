@@ -2,12 +2,13 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(strong_params)
     @pokemon = Pokemon.find(params[:pokemon_id])
+
     @booking.user = current_user
     @booking.pokemon = @pokemon
     if @booking.save
       redirect_to profile_path
     else
-      render 'pages/show', status: :unprocessable_entity
+      render 'pokemons/show', status: :unprocessable_entity
     end
   end
 
