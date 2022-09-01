@@ -12,6 +12,8 @@ require "json"
 puts "deleting all pokemons..."
 Pokemon.destroy_all
 
+locations = ["Birmingham", "Liverpool", "Manchester", "London", "Nottingham", "Newcastle", "Leeds", "Coventry", "Essex", "York", "Cambridge", "Paris", "New York", "Nairobi", "Madrid", "Florida"]
+
 
 15.times do
   user = User.create(
@@ -32,6 +34,8 @@ Pokemon.destroy_all
 
   image_path = pokemon["sprites"]["other"]["dream_world"]["front_default"]
   element = pokemon["types"][0]["type"]["name"]
-  pokemon = Pokemon.create(name: name, move: abilities, image_path: image_path, element: element, user: user)
+  # pokemon = Pokemon.create(name: name, move: abilities, image_path: image_path, element: element, user: user)
+  pokemon = Pokemon.create(name: name, move: abilities, image_path: image_path, element: element, user: user, address: locations.sample)
+
 
   end
