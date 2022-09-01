@@ -4,19 +4,37 @@
 .banner {
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
+
+
+.button {
+  color: #f6c009;
+}
+
+
+// .clear-icon {
+//   // position: absolute;
+//   // top: 8px;
+//   // right: 8px;
+//   // width: 10px;
+//   // cursor: pointer;
+//   <!-- visibility: hidden; -->
+// }
+
+
 .main-container {
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 2fr 2fr;
 }
 .cards {
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   /* flex-grow: 1; */
   padding: 16px;
 }
 .card {
-  max-width: 200px;
+  max-width: 300px;
   border-bottom: 10px;
   border-top: 10px;
   padding: 20px;

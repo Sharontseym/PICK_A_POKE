@@ -35,12 +35,16 @@
 .footer-fluid {
   text-align: center;
   padding-top: 20px;
+  background-color: #ffcc01;
+  padding-bottom: 0px;
 }
 
 .footer-fluid ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
 }
 
 .fa {
