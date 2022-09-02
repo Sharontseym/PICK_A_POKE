@@ -1,30 +1,50 @@
 
-<p>User Account:</p>
-<%=current_user.email%>
-<p> Total Pokemons: </p>
-<%= current_user.pokemons.length %>
-<p> Names: </p>
-<%= current_user.pokemons.each do |pokemon| %>
-  <p> <%= pokemon.name %></p>
-<% end  %>
-<p></p>
 
 
-<div class="container pb-2" style="border-top: 1px solid lightgrey !important; border-bottom: 1px solid lightgrey !important;">
-  <p style="font-size: 24px; font-weight: bold; margin-top: 8px;">My booked pokemons </p>
-  <div class="row">
-    <% current_user.bookings.each do |booking| %>
-      <div class="col-sm-6 col-md-4 col-lg-3">
 
-          <div class="mb-3" style="width: 100%; border-radius: 8px;">
-            <div class="card-body">
-              <p>Booked for <%= booking.date %></p>
-              <p><em>Pokemon: <%= booking.pokemon.name %></em></p>
-              <p>Owner: <%= booking.pokemon.user.email %></p>
+
+
+
+
+<div class="container py-5">
+  <div class="col-6">
+    <h3> Account Details: </h3>
+    <%=current_user.email%>
+    <p></p>
+    <h4> Total Pokemons: </h4>
+    <%= current_user.pokemons.length %>
+    <h4> Names: </h4>
+      <% current_user.pokemons.each do |pokemon| %>
+      <p> <%= pokemon.name %></p>
+      <%= pokemon.image_path %>
+      <% end  %>
+  <p></p>
+
+
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <%= link_to "Add your pokemons here", new_pokemon_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+  <p></p>
+
+<div class="col-12">
+  <div class="container pb-2" style="border-top: 1px solid lightgrey !important; border-bottom: 1px solid lightgrey !important;">
+    <p style="font-size: 24px; font-weight: bold; margin-top: 8px;">My booked pokemons </p>
+    <div class="row">
+      <% current_user.bookings.each do |booking| %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+
+            <div class="mb-3" style="width: 100%; border-radius: 8px;">
+              <div class="card-body">
+                <p>Booked for <%= booking.date %></p>
+                <p><em>Pokemon: <%= booking.pokemon.name %></em></p>
+                <p>Owner: <%= booking.pokemon.user.email %></p>
+              </div>
             </div>
-          </div>
 
-      </div>
-    <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
