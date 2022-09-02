@@ -1,6 +1,7 @@
 <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokemon-party.jpg);">
   <div class="banner-content">
     <h1>Take your pick of our poke</h1>
+    <p>Take a look at Pokemon around the globe and do battle with friends!!!!!</p>
   </div>
 </div>
 <div class="searchbar" >
@@ -17,14 +18,15 @@
 <div class="main-container">
   <div class="cards">
     <%@pokemons.each do |pokemon| %>
-    <div class="card">
-      <div class="card-photo"><%= cl_image_tag pokemon.photo.key, width: 100, crop: :fill %></div>
-      <%# <ul class="list-group list-group-flush"> %>
-        <h1> <%= pokemon.name %></h1>
-        <p class="list-group-item"><%= pokemon.element %></p>
-        <p class="list-group-item"><%= pokemon.move %></p>
-      <%# </ul> %>
-    </div>
+      <%= link_to pokemon_path(pokemon.id), class:"text-decoration-none" do %>
+        <div class="card">
+          <div class="card-photo"><%= cl_image_tag pokemon.photo.key, width: 100, crop: :fill %>
+          </div>
+          <h1 class="text-black mt-4"> <%= pokemon.name %></h1>
+          <p class="list-group-item text-black"><%= pokemon.element %></p>
+          <p class="list-group-item text-black"><%= pokemon.move %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div id="map">

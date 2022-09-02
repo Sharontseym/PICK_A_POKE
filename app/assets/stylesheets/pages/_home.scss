@@ -5,6 +5,11 @@
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
+.banner-content p {
+  color: black;
+  opacity: 0.7;
+}
+
 .button {
   color: #f6c009;
 }
@@ -13,20 +18,22 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
 }
-.cards {
 
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   /* flex-grow: 1; */
   padding: 16px;
   border-radius: 8px;
-  
+
 }
 .card {
   font-family: 'Pokemon Solid', sans-serif;
   border: solid  #385BA8 5px!important;
-  max-width: 480px;
+  width: 260px;
+  height: 330px !important;
+  // min-width: ;
   padding: 20px;
   background-color: #FFCC01!important;
   margin: 30px;
@@ -37,6 +44,7 @@
 .card h1 {
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 4px;
+  font-size: 30px;
 }
 
 .card-photo {
@@ -46,6 +54,7 @@
 .searchbar h3 {
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 4px;
+  padding: 20px;
 }
 
 .card-title {
