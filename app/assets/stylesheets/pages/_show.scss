@@ -13,15 +13,43 @@
  justify-content: space-evenly;
  border-bottom: solid grey 2px;
 }
+.row {
+  padding: 20px;
+}
 
-.col-6 {
+#pokemon-logo {
+  size: 200px;
+}
+
+.card-show {
+  border: solid  #385ba8 5px;
+  max-width: 580px;
+  // padding: 20px;
+  background-color: #ffcc01;
+  // margin: 30px;
+  box-shadow: 0 0 5px;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+  height: 600px;
+}
+
+.card-show-text {
+  text-align: center;
+  font-size: 20px;
+}
+
+.book-card {
   border: solid  #385ba8 5px;
   max-width: 480px;
-  padding: 20px;
+  // padding: 20px;
   background-color: #ffcc01;
   margin: 30px;
   box-shadow: 0 0 5px;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
 }
+
 
 .col-12 {
   border: solid  #385ba8 5px;
@@ -33,9 +61,14 @@
 }
 
 .col-6 h1 {
+
+.book-card h1 {
+  padding: 20px;
+
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 4px;
 }
+
 
 .col-6 h4 {
   font-family: 'Pokemon Solid', sans-serif;
@@ -49,17 +82,34 @@
 
 .card-info {
   margin-top: 30px;
+
+.profile-card {
+  font-family: 'Pokemon Solid', sans-serif;
+  border: solid  #385ba8 5px;
+  max-width: 480px;
+  padding: 20px;
+  background-color: #ffcc01;
+  margin: 30px;
+  box-shadow: 0 0 5px;
+
   text-align: center;
-  height: 280px;
-  align-items: center;
 }
 
+.profile-card h1 {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+}
 
 .footer-fluid {
   text-align: center;
   padding-top: 20px;
   background-color: #ffcc01;
   padding-bottom: 0px;
+}
+
+.footer-fluid p {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
 }
 
 .footer-fluid ul {
