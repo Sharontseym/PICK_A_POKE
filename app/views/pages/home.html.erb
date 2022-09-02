@@ -1,10 +1,10 @@
 <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokemon-party.jpg);">
   <div class="banner-content">
     <h1>Take your pick of our poke</h1>
-    <p>Take a look at Pokemon around the globe and do battle with friends!!!!!</p>
+    <p>Do battle with trainers from around the world</p>
   </div>
 </div>
-<div class="searchbar" >
+<div class="searchbar" style="width: 50vw; padding-left: 43px; padding-right: 43px;">
 <h3>Search for Pokemon</h3>
   <%= form_with url: root_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
