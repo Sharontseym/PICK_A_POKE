@@ -32,6 +32,8 @@
   grid-gap: 16px;
   /* flex-grow: 1; */
   padding: 16px;
+  border-radius: 8px;
+  
 }
 .card {
   max-width: 300px;
@@ -40,6 +42,7 @@
   padding: 20px;
   border: solid #FFCC01 5px;
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+ 
 }
 
 .title {
