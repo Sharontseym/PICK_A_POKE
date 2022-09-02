@@ -1,15 +1,15 @@
 <div class="banner" style="background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1716861/pexels-photo-1716861.jpeg?cs=srgb&dl=pexels-carolina-castilla-arias-1716861.jpg&fm=jpg);">
   <div class="banner-content">
-    <h1>My Profile</h1>
+    <h1>Trainer Profile</h1>
   </div>
 </div>
 
 <div class="container py-5">
-  <div class="col-6">
+  <div class="col-7">
     <h1> Account Details: </h1>
 
-    <%=current_user.email%>
-    <p></p>
+
+    <p id="profile-email"><%=current_user.email%></p>
     <h4> Number of Pokemons: </h4>
     <%= current_user.pokemons.length %>
     <p></p>
@@ -35,7 +35,7 @@
   <p></p>
 
 <div class="col-12">
-  <div class="container pb-2" style="border-top: 1px solid lightgrey !important; border-bottom: 1px solid lightgrey !important;">
+  <div class="container pb-2">
     <h1>My booked pokemons: </h1>
     <p></p>
     <div class="row">
