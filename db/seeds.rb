@@ -37,5 +37,9 @@ locations = ["Birmingham", "Liverpool", "Manchester", "London", "Nottingham", "N
   # pokemon = Pokemon.create(name: name, move: abilities, image_path: image_path, element: element, user: user)
   pokemon = Pokemon.create(name: name, move: abilities, image_path: image_path, element: element, user: user, address: locations.sample)
 
+  file = URI.open(image_path)
+  pokemon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  pokemon.save!
+
 
   end

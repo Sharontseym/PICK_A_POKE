@@ -1,7 +1,14 @@
 
 <p>User Account:</p>
 <%=current_user.email%>
+<p> Total Pokemons: </p>
+<%= current_user.pokemons.length %>
+<p> Names: </p>
+<%= current_user.pokemons.each do |pokemon| %>
+  <p> <%= pokemon.name %></p>
+<% end  %>
 <p></p>
+
 
 <div class="container pb-2" style="border-top: 1px solid lightgrey !important; border-bottom: 1px solid lightgrey !important;">
   <p style="font-size: 24px; font-weight: bold; margin-top: 8px;">My booked pokemons </p>
