@@ -5,21 +5,9 @@
   box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
-
 .button {
   color: #f6c009;
 }
-
-
-// .clear-icon {
-//   // position: absolute;
-//   // top: 8px;
-//   // right: 8px;
-//   // width: 10px;
-//   // cursor: pointer;
-//   <!-- visibility: hidden; -->
-// }
-
 
 .main-container {
   display: grid;
@@ -36,38 +24,45 @@
   
 }
 .card {
-  max-width: 300px;
-  border-bottom: 10px;
-  border-top: 10px;
+  font-family: 'Pokemon Solid', sans-serif;
+  border: solid  #385BA8 5px!important;
+  max-width: 480px;
   padding: 20px;
-  border: solid #FFCC01 5px;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
- 
+  background-color: #FFCC01!important;
+  margin: 30px;
+  box-shadow: 0 0 5px;
+  text-align: center;
 }
 
-.title {
+.card h1 {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+}
+
+.card-photo {
+  text-align: center;
+}
+
+.searchbar h3 {
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+}
+
+.card-title {
   height: 40px;
   position: absolute;
   left: 166px;
   bottom: 18px;
 }
+
 #map {
-  padding: 20px 20px 20px 0px;
-  width: 100%;
   height: 100vh;
-  width: 600px;
-  object-fit: cover;
   position: sticky;
   top: 0;
-  // box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  padding: 20px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   /* flex-grow: 1; */
-//   /* padding: 16px; */
-// }
+
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
@@ -78,3 +73,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+// .profile-card {
+//   font-family: 'Pokemon Solid', sans-serif;
+//   border: solid  #385BA8 5px;
+//   max-width: 480px;
+//   padding: 20px;
+//   background-color: #FFCC01;
+//   margin: 30px;
+//   box-shadow: 0 0 5px;
+//   text-align: center;
+// }
