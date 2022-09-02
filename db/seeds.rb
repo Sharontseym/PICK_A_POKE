@@ -13,8 +13,8 @@ puts "deleting all pokemons..."
 Booking.destroy_all
 Pokemon.destroy_all
 
-locations = ["Birmingham", "Liverpool", "Manchester", "London", "Nottingham", "Newcastle", "Leeds", "Coventry", "Essex", "York", "Cambridge", "Paris", "New York", "Nairobi", "Madrid", "Florida"]
 
+locations = ["Birmingham", "Liverpool", "Manchester", "London", "Nottingham", "Newcastle", "Leeds", "Coventry", "Essex", "York", "Cambridge", "Paris", "New York", "Nairobi", "Madrid", "Florida"]
 
 15.times do
   user = User.create(
