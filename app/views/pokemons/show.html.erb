@@ -4,47 +4,55 @@
   </div>
 </div>
 <div class="container-fluid">
-    <div class="col-6">
-      <h1><%= @pokemon.name %></h1>
-      <p><%= @pokemon.element %></p>
-      <p><%= @pokemon.move %></p>
-      <div>
-        <%# <%= image_tag @pokemon.image_path, class:"image" %>
-        <%= cl_image_tag @pokemon.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="row">
+    <div class="col-6" style="padding: 20px;">
+      <div class="card-show">
+        <div class="card-show-text">
+          <%= cl_image_tag @pokemon.photo.key, height: 300, width: 400, crop: :fill %>
+          <h1><%= @pokemon.name %></h1>
+          <%# <i class="fa-regular fa-fire"></i> %>
+          <p><%= @pokemon.element %></p>
+          <p><%= @pokemon.move %></p>
+        </div>  <%# <iconify-icon id="pokemon-logo" icon="simple-icons:pokemon"></iconify-icon> %>
       </div>
     </div>
     <div class="col-6">
-      <h1>Book this Pokemon</h1>
-      <div class="form-inputs">
-        <%= simple_form_for [@pokemon, @booking] do |f| %>
-          <%= f.input :date, html5: true %>
+      <div class="row">
+        <div class="book-card">
+          <h1>Book this Pokemon</h1>
+          <div class="form-inputs">
+            <%= simple_form_for [@pokemon, @booking] do |f| %>
+            <%= f.input :date, html5: true %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Book now", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <div>
+            <p>This is the owners details</p>
+            <p>Mr Pokemons Address</p>
+            <p>07649833671</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>SW79 6TY, London, UK</p>
+          </div>
+        </div>
       </div>
-      <div class="form-actions">
-        <%= f.button :submit, "Book now", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-      <div class="card-info">
-        <p>This is the owners details</p>
-        <p>Mr Pokemons Address</p>
-        <p>07649833671</p>
-        <p>SW79 6TY, London, UK</p>
-      </div>
-  </div>
-</div>
-
-<div class="profile-card">
-        <h1>Pokemon Trainer</h1>
-        <img class="avatar dropdown-toggle" src="/assets/avatar-7cb4cd68c9a5e40a849d8d1551a039ac6708f52ed544a3a7aef270730b5fbd7f.png" alt="Profile Image">
-        <p>Pokemons: 1</p>
-        <p>Rating: 3.98</p>
-        <div>
+      <div class="row">
+        <div class="profile-card">
+          <h1>Pokemon Trainer</h1>
+          <img class="avatar dropdown-toggle" src="/assets/avatar-7cb4cd68c9a5e40a849d8d1551a039ac6708f52ed544a3a7aef270730b5fbd7f.png" alt="Profile Image">
+          <p>Pokemons: 1</p>
+          <p>Rating: 3.98</p>
           <p>Name: Rory</p>
           <p>Surname: Jackson</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
 <div class="footer-fluid">
-  <p>I know how much you love us so follow us below</p>
+  <p>If you love us as much as you seem to, follow us below...</p>
   <ul style="list-style: none;">
     <li><a href="#" class="fa fa-facebook"></a></li>
     <li><a href="#" class="fa fa-instagram"></a></li>
